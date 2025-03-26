@@ -11,6 +11,12 @@ class Card:
         self._suit = suit
         self._rank = rank
 
+    def __eq__(self, other):
+        return self.rank == other.rank
+
+    def __gt__(self, other):     #you can't compare ranks, cause rn they're strings. you should compare the POSITION of the rank on the list
+        return self.RANKS.index(self.rank) > self.RANKS.index(other.rank) #compare the position in the rank list of self. versus the position in the rank of other.
+
     def __str__(self): #this is to be able to print the cards
         return f"{self._rank}{self._suit}" #establishing the order it will be printed on
 
