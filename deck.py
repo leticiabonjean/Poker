@@ -35,12 +35,12 @@ class Card:
         """
         return self.RANKS.index(self.rank) > self.RANKS.index(other.rank) #compare the position in the rank list of self. versus the position in the rank of other.
 
-    def __str__(self): #this is to be able to print the cards
-       """
-       magic method tha returns a human-readable representation of the Card instance
-       :return: "rank suit"
-       """
-        return f"{self._rank}{self._suit}" #establishing the order it will be printed in
+    def __str__(self):
+        """
+        magic method that returns a human-readable representation of the card instance
+        :return: "rank suit"
+        """
+        return f"{self._rank}{self._suit}"
 
     def __repr__(self):
         """
@@ -66,7 +66,6 @@ class Card:
         return self._rank
 
     # jack_clubs = Card("♣", "J")
-    # print(jack_clubs)
 
 #now you want to crease a class for a DECK
 

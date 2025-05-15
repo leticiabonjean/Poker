@@ -127,7 +127,3 @@ while matches < 10:
 
 print(f"probability of a flush is {100*matches/count}%")
 
-deck = Deck()
-deck.shuffle()
-hand = PokerHand(deck)
-print(hand) #will give you 5 random cards from the deck, which was just shuffled
